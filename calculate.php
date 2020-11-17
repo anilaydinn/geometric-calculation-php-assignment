@@ -2,13 +2,11 @@
 
 if(isset($_POST["calculate_circle"])){
 
-    define('PI_NUMBER', pi());
-
     if($_POST['input_radius'] != 0){
         $radius = $_POST['input_radius'];
 
-        $area = PI_NUMBER * pow($radius,2);
-        $circumference = 2 * PI_NUMBER * $radius;
+        $area = M_PI * pow($radius,2);
+        $circumference = 2 * M_PI * $radius;
         header("Location:./index.php?circle_area=$area&circle_circumference=$circumference");
     }
     else{
